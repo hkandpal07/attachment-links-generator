@@ -6,7 +6,7 @@ const json2xls = require('json2xls');
 const filePath = process.argv[2];
 const sheetName = process.argv[3];
 
-const confluenceBaseUrl = 'https://interlink.atlassian.net/wiki';
+const confluenceBaseUrl = 'https://interlink.atlassian.net/wiki'; // modify this to client's url 
 
 const getWorksheet = (path, sheetName) => {
     try {
