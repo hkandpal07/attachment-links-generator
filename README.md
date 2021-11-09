@@ -23,4 +23,5 @@ Example usage:
 
 ## Result
 
-The resultant json will be printed in a file named `attachmentsData.json` in the root of the program.
+1. The resultant excel file will be written to the root of the program in a file named `attachmentsData.xlsx`.
+2. Output json will also be printed in a file named `attachmentsData.json` in the root of the program.

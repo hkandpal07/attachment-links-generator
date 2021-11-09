@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 const xlsx = require('node-xlsx');
+const json2xls = require('json2xls');
 
 const filePath = process.argv[2];
 const sheetName = process.argv[3];
@@ -55,6 +56,10 @@ const buildJSON = (filePath, sheetName) => {
         }
 
         fs.writeFileSync('attachmentsData.json', JSON.stringify(jsonArray))
+
+        const excelData = json2xls(jsonArray);
+
+        fs.writeFileSync('attachmentsData.xlsx', excelData, 'binary');
     } catch(err) {
         console.error(err)
     }
